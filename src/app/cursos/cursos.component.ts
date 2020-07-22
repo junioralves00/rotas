@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 import { CursosService } from './cursos.service';
-import { Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-cursos',
@@ -41,7 +42,7 @@ export class CursosComponent implements OnInit {
   proximaPagina(){
     //this.pagina++;
     this.router.navigate(['/cursos'],
-        {queryParams: {'pagina': this.pagina++}});
+        {queryParams: {'pagina': ++this.pagina}});//Incrementa antes e passa o parametro depois
   }
 
 
