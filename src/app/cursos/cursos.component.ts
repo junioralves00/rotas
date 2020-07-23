@@ -23,7 +23,7 @@ export class CursosComponent implements OnInit {
       ) { }
 
   ngOnInit(): void {
-    
+
     this.cursos = this.cursosService.getCursos();
 
     this.inscricao = this.route.queryParams.subscribe(
