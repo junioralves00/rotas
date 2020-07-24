@@ -24,7 +24,7 @@ curso: any;
   }
 
   ngOnInit() {
-    
+
     this.inscricao = this.route.params.subscribe(
       (params: any) =>{
         this.id = params['id'];
@@ -32,11 +32,12 @@ curso: any;
         this.curso = this.CursosService.getCurso(this.id);
 
         if(this.curso == null){
-          this.router.navigate(['/naoEncontrado']);
+          this.router.navigate(['/cursos/naoEncontrado']);
         }
       }
     );
   }
+
 
   ngOnDestroy() {
     this.inscricao.unsubscribe();

@@ -1,4 +1,4 @@
-import { AlunosModule } from './alunos/alunos.modules';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,8 +11,8 @@ import { LoginComponent } from './login/login.component';
 //import { CursosService } from './cursos/cursos.service';
 //import { CursoNaoEncontradoComponent } from './cursos/curso-nao-encontrado/curso-nao-encontrado.component';
 import { AppRoutingModule } from './app-routing.module';
-import { CursosModule } from './cursos/cursos.module';
-
+//import { CursosModule } from './cursos/cursos.module';
+//import { AlunosModule } from './alunos/alunos.modules';
 
 
 
@@ -31,8 +31,8 @@ import { CursosModule } from './cursos/cursos.module';
   imports: [
     BrowserModule,
     FormsModule,
-    CursosModule,
-    AlunosModule,
+    //CursosModule,
+    //AlunosModule,
     AppRoutingModule
   ],
   //providers: [CursosService],
