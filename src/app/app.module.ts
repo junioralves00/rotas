@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 //import { CursosModule } from './cursos/cursos.module';
 //import { AlunosModule } from './alunos/alunos.modules';
-
+import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -21,8 +21,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HomeComponent,
     LoginComponent,
-
-
     /*,
     CursosComponent,
     CursoDetalheComponent,
@@ -36,6 +34,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   //providers: [CursosService],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
