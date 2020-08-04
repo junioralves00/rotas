@@ -14,13 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 //import { AlunosModule } from './alunos/alunos.modules';
 import { AuthService } from './login/auth.service';
 import { AuthGuard } from './guards/auth.guard';
-
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
+    LoginComponent
     /*,
     CursosComponent,
     CursoDetalheComponent,
@@ -34,7 +35,12 @@ import { AuthGuard } from './guards/auth.guard';
     AppRoutingModule
   ],
   //providers: [CursosService],
-  providers: [AuthService, AuthGuard],
+  providers: [
+    AuthService,
+    AuthGuard,
+    CursosGuard,
+    AlunosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
